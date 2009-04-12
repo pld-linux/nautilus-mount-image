@@ -1,12 +1,12 @@
 Summary:	Mount and unmount the selected CD or DVD image from Nautilus
 Summary(pl.UTF-8):	Zamontuj i odmontuj wskazany obraz CD albo DVD z Nautilusa
 Name:		nautilus-mount-image
-Version:	0.1.0
-Release:	0.1
+Version:	0.2.0
+Release:	1
 License:	GPL v2
 Group:		X11/Libraries
 Source0:	http://mundogeek.net/repo/pool/ubuntu/all/%{name}_%{version}-1.tar.gz
-# Source0-md5:	e8c0508a53f3d665915109927b08ea89
+# Source0-md5:	0f7abcdec72c34c235945421607ee078
 URL:		http://mundogeek.net/nautilus-scripts/#nautilus-mount-image
 Requires:	nautilus-python >= 0.4.3
 Requires:   python-pygtk >= 2.12.1
@@ -32,9 +32,13 @@ rm -rf $RPM_BUILD_ROOT
 %{__make} install \
 	DESTDIR=$RPM_BUILD_ROOT
 
+%find_lang %{name}
+
 %clean
 rm -rf $RPM_BUILD_ROOT
 
-%files
+%files -f %{name}.lang
 %defattr(644,root,root,755)
-%{_libdir}/nautilus/extensions-1.0/python/*
+%doc changelog
+%{_libdir}/nautilus/extensions-2.0/python/%{name}.py
+%{_pixmapsdir}/nautilus-mount-image.png
