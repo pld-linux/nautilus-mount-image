@@ -5,7 +5,7 @@ Version:	0.2.0
 Release:	1
 License:	GPL v2
 Group:		X11/Libraries
-Source0:	http://ppa.launchpad.net/zootropo/ubuntu/pool/main/n/nautilus-mount-image/nautilus-mount-image_0.2.0-1.tar.gz
+Source0:	http://ppa.launchpad.net/zootropo/ubuntu/pool/main/n/nautilus-mount-image/%{name}_%{version}-1.tar.gz
 # Source0-md5:	0f7abcdec72c34c235945421607ee078
 URL:		http://mundogeek.net/nautilus-scripts/#nautilus-mount-image
 Requires:	nautilus-python >= 0.4.3
