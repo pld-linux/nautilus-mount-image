@@ -1,0 +1,12 @@
+diff -u nautilus-mount-image-0.2.0.orig/Makefile ../BUILD/nautilus-mount-image-0.2.0/Makefile
+--- nautilus-mount-image-0.2.0.orig/Makefile	2008-10-03 15:58:12.000000000 +0000
++++ nautilus-mount-image-0.2.0/Makefile	2009-04-12 10:46:13.000000000 +0000
+@@ -2,7 +2,7 @@
+ PACKAGE=nautilus-mount-image
+ 
+ # Directories
+-EXTENSIONS_DIR=/usr/lib/nautilus/extensions-2.0/python/
++EXTENSIONS_DIR=$(LIBDIR)/nautilus/extensions-2.0/python/
+ PIXMAPS_DIR=/usr/share/pixmaps/
+ LOCALE_DIR = /usr/share/locale
+ 
